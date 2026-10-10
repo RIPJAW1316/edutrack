@@ -1,0 +1,21 @@
+# Render Blueprint — deploys the Spring Boot API (cs/) as a Docker web service.
+# One-click: https://render.com/deploy?repo=https://github.com/RIPJAW1316/edutrack
+services:
+  - type: web
+    name: edutrack-api-ripjaw
+    runtime: docker
+    plan: free
+    region: singapore
+    dockerfilePath: ./cs/Dockerfile
+    dockerContext: ./cs
+    healthCheckPath: /departments
+    autoDeploy: true
+    buildFilter:
+      paths:
+        - cs/**
+        - render.yaml
+    envVars:
+      - key: SPRING_PROFILES_ACTIVE
+        value: prod
+      - key: JWT_SECRET
+        generateValue: true
