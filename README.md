@@ -142,6 +142,21 @@ Seeded automatically on first start — or use the one-click demo cards on the s
 | 🛡️ Administrator | `admin@edutrack.com` | `admin123` | Full read & write |
 | 🎓 Student | `student@edutrack.com` | `student123` | Read-only |
 
+## ☁️ Deployment
+
+The API runs on **Render** (Docker) and the web app on **Vercel**.
+
+| Part | Platform | How |
+| :-- | :-- | :-- |
+| **API** (`cs/`) | Render · Docker | [`render.yaml`](render.yaml) Blueprint → builds [`cs/Dockerfile`](cs/Dockerfile), runs the `prod` profile (in-memory H2, reseeded on every start), generates `JWT_SECRET` |
+| **Web app** (`frontend/`) | Vercel · Vite | Root directory `frontend`, env `VITE_API_URL=https://<your-api>.onrender.com`; [`vercel.json`](frontend/vercel.json) handles SPA routing |
+
+<a href="https://render.com/deploy?repo=https://github.com/RIPJAW1316/edutrack"><img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="32" /></a>
+&nbsp;
+<a href="https://vercel.com/new/clone?repository-url=https://github.com/RIPJAW1316/edutrack&root-directory=frontend&env=VITE_API_URL&envDescription=Base%20URL%20of%20the%20EduTrack%20API%20on%20Render"><img src="https://vercel.com/button" alt="Deploy with Vercel" height="32" /></a>
+
+> Render's free plan sleeps after ~15 minutes idle — the first request then takes up to a minute while the API wakes up (the sign-in screen tells you when this is happening). Demo data resets whenever the API restarts.
+
 ## ⌨️ Keyboard shortcuts
 
 | Shortcut | Action | | Shortcut | Action |
