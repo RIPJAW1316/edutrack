@@ -1,0 +1,15 @@
+# Normalise text to LF in the repository
+* text=auto
+
+# Windows scripts keep CRLF; the POSIX Maven wrapper keeps LF
+*.bat text eol=crlf
+*.cmd text eol=crlf
+cs/mvnw text eol=lf
+
+# Binary assets — never touch line endings
+*.pdf binary
+*.webp binary
+*.png binary
+*.jpg binary
+*.ico binary
+*.jar binary

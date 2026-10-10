@@ -1,0 +1,28 @@
+# Dependencies & build output
+node_modules/
+dist/
+target/
+
+# Archives, backups and unrelated legacy projects
+*.rar
+*.zip
+/backend/
+/onetoone/
+/package.json
+/package-lock.json
+
+# Local tooling
+.claude/
+.vscode/
+.idea/
+*.iml
+
+# Environment & logs
+.env
+.env.*
+*.log
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
