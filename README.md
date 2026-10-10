@@ -18,6 +18,7 @@ A full-stack student & department management platform — a keyboard-first React
   <img alt="MySQL / H2" src="https://img.shields.io/badge/DB-MySQL_%7C_H2-4479A1?style=flat-square&logo=mysql&logoColor=white" />
 </p>
 
+<a href="https://edutrack-ripjaw.vercel.app"><b>🌐 Live demo</b></a> ·
 <a href="#-quick-start"><b>Quick start</b></a> ·
 <a href="#-features"><b>Features</b></a> ·
 <a href="#-screenshots"><b>Screenshots</b></a> ·
@@ -149,7 +150,7 @@ The API runs on **Render** (Docker) and the web app on **Vercel**.
 | Part | Platform | How |
 | :-- | :-- | :-- |
 | **API** (`cs/`) | Render · Docker | [`render.yaml`](render.yaml) Blueprint → builds [`cs/Dockerfile`](cs/Dockerfile), runs the `prod` profile (in-memory H2, reseeded on every start), generates `JWT_SECRET` |
-| **Web app** (`frontend/`) | Vercel · Vite | Root directory `frontend`, env `VITE_API_URL=https://<your-api>.onrender.com`; [`vercel.json`](frontend/vercel.json) handles SPA routing |
+| **Web app** (`frontend/`) | Vercel · Vite | Live at [edutrack-ripjaw.vercel.app](https://edutrack-ripjaw.vercel.app) · root directory `frontend`, env `VITE_API_URL=https://<your-api>.onrender.com`; [`vercel.json`](frontend/vercel.json) handles SPA routing |
 
 <a href="https://render.com/deploy?repo=https://github.com/RIPJAW1316/edutrack"><img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render" height="32" /></a>
 &nbsp;
